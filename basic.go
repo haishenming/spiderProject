@@ -66,4 +66,15 @@ func main() {
 
 	euler()
 	tringle()
+
+	// 常数
+	const (
+		con  = 1 << 1
+		n1  float32 = iota * con
+		n2  float32 = iota * con
+		n3  float32 = iota * con
+		n4  float32 = iota * con
+	)
+
+	fmt.Println(con, n1, n2, n3, n4)
 }
