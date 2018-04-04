@@ -49,9 +49,50 @@ func tringle() {
 	var a, b int = 3, 4
 	var c int
 
-	c = int(math.Sqrt(float64(a * a + b * b)))
+	c = int(math.Sqrt(float64(a*a + b*b)))
 
 	fmt.Println(c)
+
+}
+
+// 常量
+func consts() {
+	const filename string = "abc.txt"
+	const a, b =3, 4
+	var c int
+	c = int(math.Sqrt(a*a + b*b))
+	fmt.Println(filename, c)
+}
+
+// 枚举
+func enums() {
+	const(
+		cpp = iota
+		java
+		python
+		golang
+	)
+
+	const(
+		b = 1 << (10 * iota)
+		kb
+		gb
+		tb
+		pb
+	)
+
+	fmt.Println(cpp, java, python, golang)
+	fmt.Println(b, kb, gb, tb, pb)
+}
+
+func bounded(v int) int {
+	if v < 100 {
+		return 100
+	} else if v < 10 {
+		return 0
+	} else {
+		return v
+	}
 }
 
 func main() {
@@ -77,4 +118,8 @@ func main() {
 	)
 
 	fmt.Println(con, n1, n2, n3, n4)
+
+	consts()
+
+	enums()
 }
