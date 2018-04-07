@@ -1,4 +1,4 @@
-package main
+package basic
 
 import (
 	"fmt"
@@ -53,6 +53,12 @@ func tringle() {
 
 	fmt.Println(c)
 
+}
+
+func calcTriangle(a, b int) int {
+	var c int
+	c = int(math.Sqrt(float64(a*a + b*b)))
+	return c
 }
 
 // 常量

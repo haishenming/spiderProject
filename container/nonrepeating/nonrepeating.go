@@ -3,10 +3,10 @@ package main
 import "fmt"
 
 func LengthOfNonRepeatingSubStr(s string) int {
-	lastOccurred := make(map[byte]int)
+	lastOccurred := make(map[rune]int)
 	start := 0
 	maxLength := 0
-	for i, ch := range []byte(s) {
+	for i, ch := range []rune(s) {
 		lastI, ok := lastOccurred[ch]
 		if ok && lastI >= start {
 			start = lastI + 1
@@ -24,5 +24,6 @@ func LengthOfNonRepeatingSubStr(s string) int {
 func main() {
 	fmt.Println(
 		LengthOfNonRepeatingSubStr("abcabcbb"))
+	fmt.Println(LengthOfNonRepeatingSubStr("红鲤鱼与绿鲤鱼与驴"))
 
 }
